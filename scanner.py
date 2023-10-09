@@ -118,11 +118,13 @@ for i in range(len(hosts)):
             if bool(downStatus):
                 print(f"[-] Host {hosts[i]} didn't answer TCP: {port}")
 
-print('[-]')
 for host in hosts:
+    print('[-]')
     print(f"[-] host: {host}:")
     for port in portsOpen[host]:
+        print('[-]')
         print(f"[-] \tport: {port} is open")
 
 stop = datetime.datetime.now()
+print('[-]')
 print(f'[-] Scanning finished in: {stop-start}')
